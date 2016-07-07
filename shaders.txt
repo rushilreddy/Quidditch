@@ -1,0 +1,35 @@
+Shader only controls a single vertex or pixel. its a parallel program that crteates rules on how to draw stuff
+
+Shader determines how the gemotry is to be drawn
+Unity uses ShaderLab. 
+
+Lighting Modes
+important vs not important. expensive lighting
+Vertex Lit- simplest render mode, no real time shadows. Lightinging is done by vertex instead of pixel so its ugly
+Forward Rendering- renders each object in different passes. does vertex lighting first then does pixel. combines all of em together. 
+Deferred Rendering- no limit on per pixel lights, most beautiful and slowest render method
+
+culling mask, choose layers to be affected by lighting
+
+Light cookie: mask that you can show on a wall. eg: prison bar grat shadows
+
+Surface Shaders allow you to write shaders affected by light
+
+vertex shader allows you to alter vertex info prior to rendering
+fragment shaers determines the final color of a single pixel 
+
+Shader "MyShader" {
+Properties{
+_MyTexture("My Texture",2D) = "white"{
+//other properties like colors of vectors
+}
+SubShader{
+//meat of surface or vertex shader}
+SubShader{
+simple version
+}
+}
+
+Time has four ways to be accessed in a shader( t/20,t,t*2,t*3) don't use loops use actual math b/c it goes for every pixel
+CGProgra
+
