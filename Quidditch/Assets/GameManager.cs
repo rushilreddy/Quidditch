@@ -22,10 +22,18 @@ public class GameManager : MonoBehaviour {
 
     public void nextHoop()
     {
-        Debug.Log("NEXTHOOp");
-        hoops[cHoop].GetComponent<Renderer>().enabled = false;
-        ++cHoop;
-        hoops[cHoop].GetComponent<Renderer>().material.color = Color.green;
+        if (cHoop == 3)
+        {
+            GetComponent<ParticleSystem>().Play();
+        }
+        else
+        {
+
+            Debug.Log("NEXTHOOp");
+            hoops[cHoop].GetComponent<Renderer>().enabled = false;
+            ++cHoop;
+            hoops[cHoop].GetComponent<Renderer>().material.color = Color.green;
+        }
 
         //hoops[cHoop].mater
     }
