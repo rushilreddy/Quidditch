@@ -57,7 +57,7 @@ public class Test : MonoBehaviour {
             camRigid.AddForce(new Vector3(0, 10, 0));
         }
 
-        cam.transform.rotation = trackedObj.transform.localRotation;
+        //cam.transform.rotation = trackedObj.transform.localRotation;
         //camRigid.AddTorque(trackedObj.transform.forward * Time.deltaTime * rotationRate);
 
         /*
